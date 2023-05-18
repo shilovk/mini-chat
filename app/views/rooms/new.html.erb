@@ -1,0 +1,11 @@
+<h1>New room</h1>
+
+<%= turbo_frame_tag "New room", target: "_top" do %>
+  <%= render "form", room: @room %>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Back to rooms", rooms_path %>
+</div>
