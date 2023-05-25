@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Rooms</h1>
+
+<%= turbo_stream_from "rooms" %>
+
+<div id="rooms">
+  <% @rooms.each do |room| %>
+    <%= render room %>
+    <p>
+      <%= link_to "Show this room", room %>
+    </p>
+  <% end %>
+</div>
+
+<%= turbo_frame_tag "New room", src: new_room_path, target: "_top" %>

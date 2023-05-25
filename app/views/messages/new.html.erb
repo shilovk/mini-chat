@@ -1,0 +1,11 @@
+<h1>New message</h1>
+
+<%= turbo_frame_tag "New message", target: "_top" do %>
+  <%= render "form", message: @message %>
+<% end %>
+
+<br>
+
+<div>
+  <%= link_to "Back to messages", room_messages_path(@message.room) %>
+</div>
